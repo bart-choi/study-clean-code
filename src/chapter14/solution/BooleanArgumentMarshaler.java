@@ -3,7 +3,7 @@ package chapter14.solution;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import static clean.code.chapter14.solution.ArgsException.ErrorCode.MISSING_BOOLEAN;
+import static chapter14.solution.ArgsException.ErrorCode.MISSING_BOOLEAN;
 
 public class BooleanArgumentMarshaler implements ArgumentMarshaler {
     private boolean booleanValue = false;

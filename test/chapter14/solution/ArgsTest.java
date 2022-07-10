@@ -233,4 +233,13 @@ public class ArgsTest {
       throw e;
     }
   }
+
+  @Test
+  public void 클린코드_점진적인_개선() throws Exception {
+      Args args = new Args("y,x#,z,a*", new String[]{"-xyza", "123", "true", "false", "String"});
+      assertEquals(4, args.cardinality());
+      assertEquals("String", args.getString('a'));
+      assertEquals(true, args.getBoolean('y'));
+      assertEquals(false, args.getBoolean('z'));
+  }
 }
